@@ -10,14 +10,7 @@
 		/* CSS3 tweaks for modern browsers */
 	}
 
-	/* single slide */
-	.imagenes div {
-		position:absolute;
-		top:0;
-		left:0;		
-		padding: 0px;
-		font-size:12px;
-	}
+	
 
 	/* header */
 	.imagenes h3 {
@@ -82,15 +75,14 @@
 	    
 	    <div class="n1" >
 		    <div style="float:left;"><img src="img/noticias.png"/></div>
-		<div class="imagenes">
+	
 		  		<% for noticia in @noticias %>
 				
-					<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; margin-right:10px;" %>
-					<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; margin-left:110px; padding-top:10px;"><%= noticia.contenido %></p>
-					
-				
+					<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; margin-right:10px; "%>
+					<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
+	
 		  		<% end %>
-		</div>
+		
 				
 		<div class="tabs"> 
 			  <% for noticia in @noticias %>
