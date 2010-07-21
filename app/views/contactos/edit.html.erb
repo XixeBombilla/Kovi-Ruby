@@ -1,0 +1,32 @@
+<h1>Editing contacto</h1>
+
+<% form_for(@contacto) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :empresa %><br />
+    <%= f.text_field :empresa %>
+  </p>
+  <p>
+    <%= f.label :correo %><br />
+    <%= f.text_field :correo %>
+  </p>
+  <p>
+    <%= f.label :telefono %><br />
+    <%= f.text_field :telefono %>
+  </p>
+  <p>
+    <%= f.label :comentario %><br />
+    <%= f.text_field :comentario %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contacto %> |
+<%= link_to 'Back', contactos_path %>

@@ -1,0 +1,32 @@
+<p><%= link_to "Administrador de Noticias", noticias_path %>&nbsp;-&nbsp;
+<%= link_to "Administrador de Asesores", asesors_path %></p>
+<% title "Contacto" %>
+
+
+<table border=1; style="border:solid;">
+  <tr>
+    <th>Nombre</th>
+    <th>Empresa</th>
+    <th>Correo</th>
+    <th>Telefono</th>
+    <th>Comentario</th>
+  </tr>
+
+<% @contactos.each do |contacto| %>
+  <tr>
+    <td><%=h contacto.nombre %></td>
+    <td><%=h contacto.empresa %></td>
+    <td><%=h contacto.correo %></td>
+    <td><%=h contacto.telefono %></td>
+    <td><%=h contacto.comentario %></td>
+    <td><%= link_to 'Show', contacto %></td>
+    <td><%= link_to 'Edit', edit_contacto_path(contacto) %></td>
+    <td><%= link_to 'Destroy', contacto, :confirm => 'Esta seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<p><%= link_to "Nuevo Cont", new_contacto_path %></p>
+
+<p><%= link_to "Salir de Admin", logout_path %></p>

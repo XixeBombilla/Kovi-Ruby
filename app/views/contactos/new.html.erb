@@ -1,0 +1,52 @@
+ <p style="font-size:14pt; ">CONTACTO</p>
+    <div id="lineaBC" style="margin-left:20px; margin-top:-20px;"></div>
+    <p style=" font-size:10pt;">
+	Ll&aacute;manos, vis&iacute;tanos o m&aacute;ndanos un mensaje.<br/>
+	Estamos a tus &oacute;rdenes.
+
+
+    </p>
+    <div id="lineaGC" style="margin-left:30px; "></div>
+     <p style=" font-size:10pt; margin-top:5px;  margin-bottom:5px;">
+	Blvd. Alonso de Torres 750<br/>
+	Colonia La Alameda<br/>
+	Le&oacute;n Guanajuato, M&eacute;xico<br/>
+	tels. (477) 470.11.80 
+    </p>
+    <div id="lineaGC" style="margin-left:30px;"></div>
+     <p style=" margin-top:5px;">
+		<% form_for(@contacto) do |f| %>
+		  <%= f.error_messages %>
+
+		  <p>
+		    <%= f.label :nombre %>
+		    <%= f.text_field :nombre %>
+		  </p>
+		  <p>
+		    <%= f.label :empresa %>
+		    <%= f.text_field :empresa %>
+		  </p>
+		  <p>
+		    <%= f.label :correo %>
+		    <%= f.text_field :correo %>
+		  </p>
+		  <p>
+		    <%= f.label :telefono %>
+		    <%= f.text_field :telefono %>
+		  </p>
+		  <p>
+		    <%= f.label :comentario %><br />
+		    <%= f.text_area :comentario %>
+		  </p>
+		  <p>
+		    <%= f.submit 'Aceptar' %>
+		  </p>
+		<% end %>
+
+    </p>
+   
+
+
+
+
+<%= link_to 'Regresar', contactos_path %>

@@ -1,0 +1,31 @@
+<% title "Asesor" %>
+
+<p>
+  <strong>Nombre:</strong>
+  <%=h @asesor.nombre %>
+</p>
+<p>
+  <strong>Telefono:</strong>
+  <%=h @asesor.tel %>
+</p>
+<p>
+  <strong>Celular:</strong>
+  <%=h @asesor.cel %>
+</p>
+<p>
+  <strong>Id-Nextel:</strong>
+  <%=h @asesor.nextel %>
+</p>
+<p>
+  <strong>Puesto:</strong>
+  <%=h @asesor.puesto %>
+</p>
+<p>
+  <strong>Imagen:</strong><br/>
+ <%= image_tag @asesor.imagen.url %>
+</p>
+<p>
+  <%= link_to "Editar", edit_asesor_path(@asesor) %> |
+  <%= link_to "Eliminar", @asesor, :confirm => 'Esta Seguro?', :method => :delete %> |
+  <%= link_to "Ver Todo", asesors_path %>
+</p>

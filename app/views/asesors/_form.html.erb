@@ -1,0 +1,28 @@
+<% form_for(@asesor, :html => {:multipart => true}) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :telefono %><br />
+    <%= f.text_field :tel %>
+  </p>
+  <p>
+    <%= f.label :celular %><br />
+    <%= f.text_field :cel %>
+  </p>
+  <p>
+    <%= f.label :id, "id-Nextel" %><br />
+    <%= f.text_field :nextel %>
+  </p>
+  <p>
+    <%= f.label :puesto %><br />
+    <%= f.text_field :puesto %>
+  </p>
+    <p>
+    <%= f.label "Imagen" %><br />
+    <%= f.file_field :imagen %>
+  </p>
+  <p><%= f.submit :Aceptar %></p>
+<% end %>
