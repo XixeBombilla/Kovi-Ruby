@@ -12,7 +12,6 @@
 
 	/* single slide */
 	.imagenes div {
-		display:none;
 		position:absolute;
 		top:0;
 		left:0;		
@@ -85,10 +84,11 @@
 		    <div style="float:left;"><img src="img/noticias.png"/></div>
 		<div class="imagenes">
 		  		<% for noticia in @noticias %>
-					<div>
+				
 					<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; margin-right:10px;" %>
-					</div>
-					<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
+					<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; margin-left:110px; padding-top:10px;"><%= noticia.contenido %></p>
+					
+				
 		  		<% end %>
 		</div>
 				
