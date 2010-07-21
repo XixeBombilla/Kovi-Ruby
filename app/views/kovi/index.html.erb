@@ -1,41 +1,4 @@
-<% content_for :head do %>
 
-<style>
-	.imagenes {
-		position: relative;
-		width:174px;
-		float:left;	
-		cursor:pointer;
-
-		/* CSS3 tweaks for modern browsers */
-	}
-
-	
-
-	/* header */
-	.imagenes h3 {
-		font-size:22px;
-		font-weight:normal;
-		margin:0 0 20px 0;
-		color:#456;
-	}
-	.tabs {
-		margin-left: 8px;
-		clear:both;
-	}
-
-
-	/* mouseover state */
-	.tabs a:hover {
-		background-position:0 -8px;      
-	}
-
-	/* active state (current page state) */
-	.tabs a.current {
-		background-position:0 -16px;     
-	}
-</style>
-<%- end -%>
 
     <div id="contenedorGeneral" >
         <br/>
@@ -83,23 +46,7 @@
 	
 		  		<% end %>
 		
-				
-		<div class="tabs"> 
-			  <% for noticia in @noticias %>
-			    <a href="#"></a> 
-			  <% end %>
-		</div>	
-		<script type="text/javascript">
-			$("div.tabs").tabs(".imagenes > div", { 
-		    // habilita el efecto de "cross-fading" 
-		    effect: 'fade', 
-	        fadeInSpeed: 1500,
-	        fadeOutSpeed: 1500,
-			// Inicio desde el principio despues del ultimo tab 
-			rotate: true 
-		   // Usa el plugin de slideshow y toma su configuración por default 
-		 	}).slideshow({autoplay: true, interval: 4000});
-		</script>
+			
 	    </div>	
 	    <div id="n2">
 		
