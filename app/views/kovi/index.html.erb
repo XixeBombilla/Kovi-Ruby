@@ -1,3 +1,49 @@
+<% content_for :head do %>
+
+<style>
+	.imagenes {
+		position: relative;
+		width:174px;
+		float:left;	
+		cursor:pointer;
+
+		/* CSS3 tweaks for modern browsers */
+	}
+
+	/* single slide */
+	.imagenes div {
+		display:none;
+		position:absolute;
+		top:0;
+		left:0;		
+		padding: 0px;
+		font-size:12px;
+	}
+
+	/* header */
+	.imagenes h3 {
+		font-size:22px;
+		font-weight:normal;
+		margin:0 0 20px 0;
+		color:#456;
+	}
+	.tabs {
+		margin-left: 8px;
+		clear:both;
+	}
+
+
+	/* mouseover state */
+	.tabs a:hover {
+		background-position:0 -8px;      
+	}
+
+	/* active state (current page state) */
+	.tabs a.current {
+		background-position:0 -16px;     
+	}
+</style>
+<%- end -%>
 
     <div id="contenedorGeneral" >
         <br/>
@@ -35,27 +81,41 @@
 		</div>
 	    </div>
 	    
-	    <div id="n1" >
-		
-		<div style="float:left;"><img src="img/noticias.png"/></div>
-		<div id="imagenNoticia" style=" width:100px; height:100px; float:left; margin-top:8px; margin-right:10px;"></div>
-		<div id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; margin-top:8px;"></div>
-		
-		<input id="flechaIzqN" style="float:left; margin-top:5px; cursor:pointer; margin-left:180px;" type="button" onclick="previousN()" value="<" />
-		<input id="flechaDerN" style="float:left; margin-top:5px; margin-left:10px; cursor:pointer;" type="button" onclick="nextN()" value=">" />
-		
-		
-		
-	    </div>
+	    <div class="n1" >
+		    <div style="float:left;"><img src="img/noticias.png"/></div>
+		<div class="imagenes">
+		  		<% for noticia in @noticias %>
+					<div>
+					<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; margin-right:10px;" %>
+					</div>
+					<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
+		  		<% end %>
+		</div>
+				
+		<div class="tabs"> 
+			  <% for noticia in @noticias %>
+			    <a href="#"></a> 
+			  <% end %>
+		</div>	
+		<script type="text/javascript">
+			$("div.tabs").tabs(".imagenes > div", { 
+		    // habilita el efecto de "cross-fading" 
+		    effect: 'fade', 
+	        fadeInSpeed: 1500,
+	        fadeOutSpeed: 1500,
+			// Inicio desde el principio despues del ultimo tab 
+			rotate: true 
+		   // Usa el plugin de slideshow y toma su configuración por default 
+		 	}).slideshow({autoplay: true, interval: 4000});
+		</script>
+	    </div>	
 	    <div id="n2">
 		
 		<div style="float:left;"><img src="img/asesores.png"/></div>
-		<div id="imagenAsesor" style="width:100px; height:100px; float:left; margin-top:8px; margin-right:10px;"></div>
-		<div id="textoAsesor" style="font-size:10pt; color:#FFF; width:120px; height:100px; float:left; margin-top:8px;"></div>
-		
-		<input id="flechaIzqA" style="float:left; margin-top:5px; cursor:pointer; margin-left:170px;" type="button" onclick="previousA()" value="<" />
-		<input id="flechaDerA" style="float:left; margin-top:5px; margin-left:10px; cursor:pointer;" type="button" onclick="nextA()" value=">" />
-		
+		  <% for asesor in @asesores %>
+		<div id="imagenAsesor" style="width:100px; height:100px; float:left; margin-top:8px; margin-right:10px;"><%= image_tag asesor.imagen.url(:thumb) %></div>
+		<div id="textoAsesor" style="font-size:10pt; color:#FFF; width:120px; height:100px; float:left; margin-top:8px;"><%= asesor.nombre %><br />Cel: <%= asesor.cel %><br />Tel: <%= asesor.tel %><br />ID: <%= asesor.nextel %><br />Puesto: <%= asesor.puesto %></div>
+		<% end %>
 	    </div>
         
         </div>

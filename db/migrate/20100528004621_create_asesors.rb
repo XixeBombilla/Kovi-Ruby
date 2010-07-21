@@ -4,7 +4,6 @@ class CreateAsesors < ActiveRecord::Migration
       t.string :nombre
       t.string :tel
       t.string :cel
-      t.string :id
       t.string :puesto
       t.timestamps
     end

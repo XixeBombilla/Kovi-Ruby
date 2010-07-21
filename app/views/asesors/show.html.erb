@@ -22,7 +22,7 @@
 </p>
 <p>
   <strong>Imagen:</strong><br/>
- <%= image_tag @asesor.imagen.url %>
+ <%= image_tag @asesor.imagen.url(:thumb) %>
 </p>
 <p>
   <%= link_to "Editar", edit_asesor_path(@asesor) %> |
