@@ -26,7 +26,7 @@ class ContactosController < ApplicationController
   # GET /contactos/new.xml
   def new
     @contacto = Contacto.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @contacto }
@@ -42,7 +42,8 @@ class ContactosController < ApplicationController
   # POST /contactos.xml
   def create
     @contacto = Contacto.new(params[:contacto])
-
+    UserMailer.deliver_registro(@contacto)
+    
     respond_to do |format|
       if @contacto.save
         format.html { redirect_to(root_path, :notice => 'Gracias por tu mensaje, estaremos en contacto') }
