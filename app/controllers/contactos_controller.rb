@@ -1,6 +1,6 @@
 class ContactosController < ApplicationController
   
-  before_filter :login_required
+  before_filter :login_required, :except => [:new, :create] 
   
   def index
     @contactos = Contacto.all
@@ -45,7 +45,7 @@ class ContactosController < ApplicationController
 
     respond_to do |format|
       if @contacto.save
-        format.html { redirect_to(@contacto, :notice => 'Contacto was successfully created.') }
+        format.html { redirect_to(root_path, :notice => 'Gracias por tu mensaje, estaremos en contacto') }
         format.xml  { render :xml => @contacto, :status => :created, :location => @contacto }
       else
         format.html { render :action => "new" }
