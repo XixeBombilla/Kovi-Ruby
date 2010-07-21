@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   def registro(contacto)
-    from mensaje.email
+    from contacto.correo
     recipients 'susanaescalantek@hotmail.com'
     subject "Desde la Pagina de Kovi"
     body :contacto => contacto 
