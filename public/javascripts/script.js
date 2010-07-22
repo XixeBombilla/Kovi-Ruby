@@ -275,11 +275,7 @@ $(function(){
                                 
                                 $("#galeria").jqFancyTransitions();
                                
-                                  $('#textoNoticia').jScrollPane({
-                                                                  scrollbarWidth: 10,
-                                                                  scrollbarMargin: 10,
-                                                                  showArrows: false
-                                               });
+                                
 
                                 
 });
