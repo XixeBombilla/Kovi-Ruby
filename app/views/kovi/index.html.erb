@@ -39,74 +39,44 @@
 	    <div id="n1" >
 		    <div style="float:left;"><img src="img/noticias.png"/></div>
 		
-	  <div class="slideshow">  
-		<div class="left-button" rel="1" style="display: block; "></div>
-		<div class="simpleSlide-window" rel="1">
-			 <div class="simpleSlide-tray" rel="1">	
-		  			<% for noticia in @noticias %>
-						<div class="simpleSlide-slide" rel="1">
-							<div style="height:140px;">
-							<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; 		margin-right:10px; "%>
-							<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
-							</div>
-						</div>
-		  			<% end %>
+			<div id="loopedSlider1">	
+				<div class="container">
+					<div class="slides">								
+						  <% for noticia in @noticias %>
+						    	<div style="height:140px;">
+								<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; 		margin-right:10px; "%>
+								<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
+								</div>
+				  			<% end %>
+						</div>			
+				</div>
 			</div>
-		</div>	
-	 <div class="right-button left" rel="1" style="display: block; "></div>
-		</div>
-			<div class="auto-slider" rel="1"></div>
-			<div class="clear"></div>
-			<script>
-			$(document).ready( function(){
 			
-				simpleSlide(); 
-				$('.auto-slider').each( function() {
-				    var related_group = $(this).attr('rel');
-
-				    window.setInterval("simpleSlideAction('.right-button', " + related_group + ");", 5000);
-				});
-				
 			
-			});
-			</script>
-		
-	    </div>	
+ </div>	
 	    <div id="n2">
 		
 		<div style="float:left;"><img src="img/asesores.png"/></div>
-		 <div class="slideshow">  
-			<div class="left-button" rel="2" style="display: block; "></div>
-			<div class="simpleSlide-window" rel="2">
-				 <div class="simpleSlide-tray" rel="2">
-		  <% for asesor in @asesores %>
-				<div class="simpleSlide-slide" rel="2">
-					<div style="height:140px;">
-						<%= image_tag asesor.imagen.url(:thumb), :style => "width:100px; height:100px; float:left; margin-top:8px; margin-right:10px;" %>
-						<p id="textoAsesor" style="font-size:10pt; color:#FFF; width:120px; height:100px; float:left; margin-top:8px;"><%= asesor.nombre %><br />Cel: <%= asesor.cel %><br />Tel: <%= asesor.tel %><br />ID: <%= asesor.nextel %><br /><%= asesor.puesto %></p>
-							</div>
-						</div>
-		<% end %>
+		
+			<div id="loopedSlider2">	
+				<div class="container">
+					<div class="slides">								
+						  <% for asesor in @asesores %>
+						    	<div style="height:140px;">
+									<%= image_tag asesor.imagen.url(:thumb), :style => "width:100px; height:100px; float:left; margin-top:8px; margin-right:10px;" %>
+									<p id="textoAsesor" style="font-size:10pt; color:#FFF; width:120px; height:100px; float:left; margin-top:8px;"><%= asesor.nombre %><br />Cel: <%= asesor.cel %><br />Tel: <%= asesor.tel %><br />ID: <%= asesor.nextel %><br/><%= asesor.puesto %></p>
+								</div>
+				  			<% end %>
+						</div>			
+				</div>
 			</div>
-		</div>	
-	 <div class="right-button left" rel="2" style="display: block; "></div>
-		</div>
-			<div class="auto-slider1" rel="2"></div>
-			<div class="clear"></div>
-			<script>
-			$(document).ready( function(){
+		
+		
+		
 			
-				simpleSlide(); 
-				$('.auto-slider1').each( function() {
-				    var related_group = $(this).attr('rel');
-
-				    window.setInterval("simpleSlideAction('.right-button', " + related_group + ");", 10000);
-				});
-				
-			
-			});
-			</script>
 	    </div>
+	
+	
         
  </div>
 	

@@ -5,9 +5,35 @@
    <title>.::Kovien ::.</title>
     <%= stylesheet_link_tag 'estilos','jScrollPane' %>
 
- <%= javascript_include_tag "jquery-1.4.2.min", 'script','jqFancyTransitions','fadeSliderToggle','jScrollPane','jquery.mousewheel', 'jquery.simpleSlide_min','jquery.simpleSlide_min' %>	
+ <%= javascript_include_tag "jquery-1.4.2.min", 'script','jqFancyTransitions','fadeSliderToggle','jScrollPane','jquery.mousewheel', 'loopedslider','loopedslider.min' %>	
 
     <%= yield(:head) %>
+	<style type="text/css" media="screen">	
+			/*
+			 * Required 
+			*/
+			.container { width:200px; height:140px; overflow:hidden; position:relative; cursor:pointer; }
+			 
+			div.slides { position:absolute; top:0; left:0; }
+			ul.slides { position:absolute; top:0; left:0; list-style:none; padding:0; margin:0; }
+			div.slides > div,ul.slides li { position:absolute; top:0; width:853px; display:none; padding:0; margin:0; }
+			/*
+			 * Optional
+			*/
+			#loopedSlider,#newsSlider { margin:0 auto; width:853px; position:relative; clear:both; }
+			ul.pagination { list-style:none; padding:0; margin:0; }
+			ul.pagination li  { float:left; }
+			ul.pagination li a { padding:1px 7px; }
+			ul.pagination li.active a { background:#fff; color:white; }
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				$('#loopedSlider1,#loopedSlider2').loopedSlider({
+					autoStart: 5000,
+					restart: 10000
+				});
+			});
+		</script>
   </head>
   <body>
    
