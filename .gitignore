@@ -9,3 +9,4 @@ db/schema.rb
 .livereload
 public/noticias/*
 public/imagenes/*
+config/database.yml
