@@ -6,4 +6,7 @@ class KoviController < ApplicationController
     @noticias = Noticia.all
   end
   
+  def inicio
+  end
+  
 end

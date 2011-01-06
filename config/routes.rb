@@ -5,6 +5,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :noticias
 
+
+  map.inicio 'inicio', :controller => 'kovi', :action => 'index'
+
   map.admin 'admin', :controller => 'asesors', :action => 'index'
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
@@ -47,7 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "kovi"
+  map.root :controller => "kovi", :action=>"inicio"
 
   # See how all your routes lay out with "rake routes"
 
