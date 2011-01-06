@@ -45,7 +45,7 @@
 						  <% for noticia in @noticias %>
 						    	<div style="height:140px;">
 								<%= image_tag noticia.imagen.url(:thumb), :style => "float:left; margin-top:8px; 		margin-right:10px; "%>
-								<p id="textoNoticia" style="font-size:10px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
+								<p id="textoNoticia" style="font-size:12px; text-align: justify; color:#FFF; width:140px; height:100px; float:left; padding-top:10px;"><%= noticia.contenido %></p>
 								</div>
 				  			<% end %>
 						</div>			
@@ -64,7 +64,7 @@
 						  <% for asesor in @asesores %>
 						    	<div style="height:140px;">
 									<%= image_tag asesor.imagen.url(:thumb), :style => "width:100px; height:100px; float:left; margin-top:8px; margin-right:10px;" %>
-									<p id="textoAsesor" style="font-size:10pt; color:#FFF; width:120px; height:100px; float:left; margin-top:8px;"><%= asesor.nombre %><br />Cel: <%= asesor.cel %><br />Tel: <%= asesor.tel %><br />ID: <%= asesor.nextel %><br/><%= asesor.puesto %></p>
+									<p id="textoAsesor" style="font-size:12pt; color:#FFF; width:120px; height:100px; float:left; margin-top:8px;"><%= asesor.nombre %><br />Cel: <%= asesor.cel %><br />Tel: <%= asesor.tel %><br />ID: <%= asesor.nextel %><br/><%= asesor.puesto %></p>
 								</div>
 				  			<% end %>
 						</div>			
@@ -108,7 +108,7 @@
 	    
 	    <p style="font-size:14pt; ">QUI&Eacute;NES SOMOS</p>
 	    <div id="lineaBC" style="margin-left:20px; margin-top:-20px;"></div>
-	    <p style="font-size:10pt;">
+	    <p style="font-size:12pt;">
 		<a  class="cMenu" id="menuM" style="cursor:pointer;">Misi&oacute;n</a><br/><br/>
 		<a  class="cMenu" id="menuV" style="cursor:pointer;">Visi&oacute;n</a><br/><br/>
 		<a  class="cMenu" id="menuL" style="cursor:pointer;">Lema</a>
@@ -126,10 +126,10 @@
 	    <p style="font-size:14pt; ">CON&Oacute;CENOS</p>
 	    <div id="lineaBC" style="margin-left:20px; margin-top:-20px;"></div>
 	    <p>
-		<a id="conoce1"  class="cMenu" style="cursor:pointer; font-size:10pt;">M&uacute;date a tu casa el mismo d&iacute;a</a><br/>
+		<a id="conoce1"  class="cMenu" style="cursor:pointer; font-size:12pt;">M&uacute;date a tu casa el mismo d&iacute;a</a><br/>
 		<div id="conocep1" style="margin-left:10px; margin-bottom:10px; display:none;">
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce1" style="font-size:10pt;">
+		    <div  id="parrafoConoce1" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px; ">
 			    Por que nosotros sabemos cuan importante es que tu casa cuente con los servicios necesarios
 			    en cuanto te mudes, te dejamos tu casa lista para que la habites y la goces a lado de tu familia.
@@ -138,11 +138,11 @@
 		    <div id="lineaGC" style="margin-left:20px;"></div>
 		    
 		</div>    
-		<a id="conoce2" class="cMenu" style="cursor:pointer; font-size:10pt;">Ambientes dise&ntilde;ados para tus hijos</a><br/><br/>
-		<div id="conocep2" style="margin-left:10px; margin-bottom:10px; display:none;">
+		<a id="conoce2" class="cMenu" style="cursor:pointer; font-size:12pt;">Ambientes dise&ntilde;ados para tus hijos</a><br/><br/>
+		<div id="conocep2" style="margin-left:12px; margin-bottom:10px; display:none;">
 		    
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce2" style="font-size:10pt;">
+		    <div  id="parrafoConoce2" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px;">
 			    Nuestros fraccionamientos est&aacute;n dise&ntilde;ados para el goce, la diversi&oacute;n y el crecimiento sano
 			    de tus hijos, lugares donde ellos pueden jugar, andar en bicicleta, correr y divertirse
@@ -154,11 +154,11 @@
 		    
 		</div>    
 		
-		<a id="conoce3" class="cMenu" style="cursor:pointer; font-size:10pt;">Construcci&oacute;n Tradicional</a><br/><br/>
-		<div id="conocep3" style="margin-left:10px; margin-bottom:10px; display:none;">
+		<a id="conoce3" class="cMenu" style="cursor:pointer; font-size:12pt;">Construcci&oacute;n Tradicional</a><br/><br/>
+		<div id="conocep3" style="margin-left:12px; margin-bottom:10px; display:none;">
 		    
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce3" style="font-size:10pt;">
+		    <div  id="parrafoConoce3" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px;">
 			   Inmobiliaria KOVI cuida siempre la calidad de tu casa. Las casas de nuestros fraccionamientos
 			   son construidas de la manera tradicional para brindarte la calidad, seguridad y estabilidad
@@ -170,11 +170,11 @@
 		    <div id="lineaGC" style="margin-left:20px;"></div>
 		    
 		</div>    
-		<a id="conoce4" class="cMenu" style="cursor:pointer; font-size:10pt;">Naturaleza en contacto contigo</a><br/><br/>
-		<div id="conocep4" style="margin-left:10px; margin-bottom:10px; display:none;">
+		<a id="conoce4" class="cMenu" style="cursor:pointer; font-size:12pt;">Naturaleza en contacto contigo</a><br/><br/>
+		<div id="conocep4" style="margin-left:12px; margin-bottom:10px; display:none;">
 		    
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce4" style="font-size:10pt;">
+		    <div  id="parrafoConoce4" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px;">
 			  Inmobiliaria KOVI no deja de lado la naturaleza y todos sus beneficios que &eacute;sta trae
 			  a tu hogar y tu familia, por lo que en nuestros desarrollos siempre cuidamos crear
@@ -185,11 +185,11 @@
 		    <div id="lineaGC" style="margin-left:20px;"></div>
 		    
 		</div>   
-		<a id="conoce5" class="cMenu" style="cursor:pointer; font-size:10pt;">Construimos para tu familia</a><br/><br/>
+		<a id="conoce5" class="cMenu" style="cursor:pointer; font-size:12pt;">Construimos para tu familia</a><br/><br/>
 		<div id="conocep5" style="margin-left:10px; margin-bottom:10px; display:none;">
 		    
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce5" style="font-size:10pt;">
+		    <div  id="parrafoConoce5" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px;">
 			  Los fraccionamientos que Inmobiliaria KOVI te ofrece est&aacute;n dise&ntilde;ados y construidos pensando en ti
 			  y en tu familia, en las necesidades de cada uno ellos, desde &aacute;reas recreativas para tus hijos hasta
@@ -200,11 +200,11 @@
 		    <div id="lineaGC" style="margin-left:20px;"></div>
 		    
 		</div>   
-		<a id="conoce6" class="cMenu" style="cursor:pointer; font-size:10pt;">El lugar ideal para comenzar tu familia</a><br/><br/>
+		<a id="conoce6" class="cMenu" style="cursor:pointer; font-size:12pt;">El lugar ideal para comenzar tu familia</a><br/><br/>
 		<div id="conocep6" style="margin-left:10px; margin-bottom:10px; display:none;">
 		    
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce6" style="font-size:10pt;">
+		    <div  id="parrafoConoce6" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px;">
 			  Si estas pensando en comenzar una familia, los fraccionamientos que
 			  Inmobiliaria KOVI te ofrece son una excelente opci&oacute;n. Tu y tu familia
@@ -219,11 +219,11 @@
 		    <div id="lineaGC" style="margin-left:20px;"></div>
 		    
 		</div>  
-		<a id="conoce7" class="cMenu" style="cursor:pointer; font-size:10pt;">Acabados de primer nivel</a><br/><br/>
+		<a id="conoce7" class="cMenu" style="cursor:pointer; font-size:12pt;">Acabados de primer nivel</a><br/><br/>
 		<div id="conocep7" style="margin-left:10px; margin-bottom:10px; display:none;">
 		    
 		    <div id="lineaGC" style="margin-left:20px;"></div>
-		    <div  id="parrafoConoce7" style="font-size:10pt;">
+		    <div  id="parrafoConoce7" style="font-size:12pt;">
 			<p style="padding=0; margin-right:15px;">
 			 Por que los detalles hacen la diferencia, Inmobiliaria KOVI te ofrece casas con acabados de primera
 			 calidad, que aportar&aacute;n el detalle y realce que tu casa merece, te ofrecemos aplanados de yeso
@@ -241,7 +241,7 @@
 	    
 	    <p style="font-size:14pt; ">DESARROLLOS</p>
 	    <div id="lineaBC" style="margin-left:20px; margin-top:-20px;"></div>
-	    <p style=" font-size:10pt;">
+	    <p style=" font-size:12pt;">
 		Da click sobre el fraccionamiento<br/>
 		y conoce más sobre éste
 
@@ -257,13 +257,13 @@
 	    
 	    <p style="font-size:14pt; ">C&Oacute;MO COMPRAR</p>
 	    <div id="lineaBC" style="margin-left:20px; margin-top:-20px;"></div>
-	    <p style=" font-size:10pt;">
+	    <p style=" font-size:12pt;">
 		Nosotros tramitamos tu cr&eacute;dito <br/>
 		SIN NINGUN COSTO
 
 	    </p>
 	    <div id="lineaGC" style="margin-left:30px; "></div>
-	    <p style=" font-size:10pt;">
+	    <p style=" font-size:12pt;">
 		Si tienes duda sobre los cr&eacute;ditos y cual<br/>
 		puedes usar para comprar tu casa, nosotros<br/>
 		te ayudamos y te orientamos. Ll&aacute;manos sin<br/>

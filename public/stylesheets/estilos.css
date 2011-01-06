@@ -1,7 +1,7 @@
 body {
     
     background-color: #999999;
-    font-family: Times, serif;
+    font-family: "GillSans-Light", sans-serif;
 	font-style: normal;
 	font-weight: 100;
 }
@@ -213,7 +213,7 @@ a:visited{
 	float:left;
 	cursor:pointer;
 	text-align:center ;
-	font-size:11pt;
+	font-size:12pt;
 }
 
 #pie{
