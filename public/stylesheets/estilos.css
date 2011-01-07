@@ -6,6 +6,8 @@ body {
 	font-weight: 100;
 }
 
+img{border:none;}
+
 a:link {
   
   color:#FFF;
