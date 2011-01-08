@@ -1,7 +1,7 @@
 class UserMailer < ActionMailer::Base
   def registro(contacto)
     from contacto.correo
-    recipients 'susanaescalantek@hotmail.com'
+    recipients 'ventas@inmobiliariakovi.com'
     subject "Desde la Pagina de Kovi"
     body :contacto => contacto 
     @sent_on      = Time.now
