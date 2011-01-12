@@ -21,7 +21,7 @@
    <div id="lineaGC" style="margin-left:30px;"></div>
 		<% form_for(@contacto) do |f| %>
 		  <%= f.error_messages %>
-		<p style="text-align:right;margin-right:30px; font-size:12px">
+		<p style="text-align:right;margin-right:30px; font-size:11px">
 		    <%= f.label :nombre %>:
 		    <%= f.text_field :nombre %><br />
 		    <%= f.label :empresa %>:
@@ -31,7 +31,7 @@
 		    <%= f.label "Tel:" %>
 		    <%= f.text_field :telefono %><br />
 		    <span style="float:left; margin-left:30px;"><%= f.label :comentario %>:</span>
-		    <%= f.text_area :comentario, :cols => 20, :rows => 5  %>
+		    <%= f.text_area :comentario, :cols => 20, :rows => 4  %>
 		<br />
 		    <%= f.submit 'Aceptar' %>
 		</p>
